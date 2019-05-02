@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>AppsFlyer Engineering | Built on Code Craftsmanship</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="AppsFlyer Engineering is Building a Culture of Engineering Excellence" />
+    <meta name="keywords" content="open source, showcase, gallery, oss, github, AppsFlyer" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://appsflyer.github.io/" />
+    <meta property="og:title" content="AppsFlyer Engineering | Built on Code Craftsmanship" />
+    <meta property="og:description" content="AppsFlyer Engineering is Building a Culture of Engineering Excellence" />
+    <meta property="og:image" content="http://appsflyer.github.io/static/share.png" />
+
+    <link rel="stylesheet" href="static/components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/components/bootstrap-material-design/dist/css/material-fullpalette.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="static/af.css">
+  </head>
+  <body>
+
+    <div class="navbar navbar-material-blue-grey">
+      <div class="container">
+        <div class="row">
+        <div class="col-md-12 text-center">
+         <img src="static/logo.png" alt="appsflyer engineering" width="200" /></div>
+        </div>
+      <div class="row">
+      <div class="col-xs-12">
+        <h1>AppsFlyer Engineering is Building a Culture of Engineering Excellence
+        </h1>
+        <h4>
+            Check out some of our coding projects.
+           </h4> 
+        <hr/>
+        </div>
+        </div>
+      </div>
+     
+      </div>   
+
+
+    <header class="navbar navbar-material-light-blue" id="affix">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
+          <ul class="nav navbar-nav" id="tag-filter"></ul>
+        </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div id="projects">
+      <div class="gap"></div>
+      <div class="gap"></div>
+    </header>
+
+   
+  </div>
+<div class="container">
+     <div class="row ">
+  <script id="project-template" type="text/x-handlebars-template">
+    {{#projects}}
+    <div class="project mix {{#each tags}}{{ escape name }} {{/each}}" data-myorder="{{ @index }}" id="project-{{ escape name }}">
+      <style>
+        #project-{{ name }} .panel,
+        #project-{{ name }} icon,
+        #project-{{ name }} stars,
+        #project-{{ name }} forks {
+          color: {{ color name }}
+        }
+        #project-{{ name }} .panel,
+        #project-{{ name }} hr,
+        #project-{{ name }} tags button {
+          background-color: {{ color name }};
+        }
+        #project-{{ name }} links a:hover {
+          background-color: rgba({{ rgb name }}, 0.2);
+        }
+      </style>
+      <div class="panel">
+        <panel-heading>
+          <icon class="icon {{ icon_class }}" style="background-image: url({{ icon_url }})"></icon>
+          <div>
+            <title>{{ name }}</title>
+            <stats>
+              {{#if stars_count}}
+              <stars><i class="mdi-action-grade"></i>{{ stars_count }}</stars>
+              {{/if}}
+              {{#if forks_count}}
+              <forks><i class="icon-flow-branch"></i>{{ forks_count }}</forks>
+              {{/if}}
+            </stats>
+          </div>
+          <tags>
+            {{#tags}}
+              <button onclick="app.filter('.{{ escape name }}', true)">{{ name }}</button>
+            {{/tags}}
+          </tags>
+          <hr />
+        </panel-heading>
+        <panel-body>
+          {{ description }}
+          {{#if links}}
+          <links>
+            {{#links}}
+            <a href="{{ url }}" target="_blank" class="btn btn-flat">
+              {{#if class}}
+              <i class="{{ class }}">
+              {{else}}
+              <i class="icon-{{ title }}">
+              {{/if}}
+              </i>{{ title }}
+            </a>
+            {{/links}}
+          </links>
+          {{/if}}
+        </panel-body>
+      </div>
+    </div>
+    {{/projects}}
+  </script>
+
+  <script id="tag-filter-template" type="text/x-handlebars-template">
+    {{#tags}}
+    <li>
+      <a href="javascript:void(0)" data-toggle="collapse" data-target=".navbar-collapse" data-tag=".{{ escape name }}" onclick="app.filter('.{{ escape name }}')">{{ name }}</a>
+    </li>
+    {{/tags}}
+  </script>
+
+  <script id="blog-template" type="text/x-handlebars-template">
+    <ul>
+    {{#entries}}
+      <li>
+        <h3><a href="{{ link }}" target="_blank">{{ title }}</a></h3>
+        <p>{{{ contentSnippet }}}</p>
+      </li>
+    {{/entries}}
+    </ul>
+  </script>
+
+  <script id="jobs-template" type="text/x-handlebars-template">
+    <ul>
+    {{#results}}
+      <li>
+        <h3><a href="{{ url }}" target="_blank">{{ title }}</a></h3>
+        <p>Location: {{ location }}</p>
+      </li>
+    {{/results}}
+    </ul>
+  </script>
+
+</div>
+</div>
+
+  <div class="jumbotron jumbotron-material-blue-grey">
+     <div class="row ">
+    <div class="col-md-12 text-center">
+      <h2 style="text-white">Recommended Posts From AppsFlyer Engineering</h2>
+
+          <div class="col-xs-12">
+          <div class="feedgrabbr_widget" id="fgid_1a4c9e1e5ffa949979b2dda1e"></div>
+          <script>if (typeof (fg_widgets) === "undefined") fg_widgets = new Array(); fg_widgets.push("fgid_1a4c9e1e5ffa949979b2dda1e");</script>
+          <script async src="https://www.feedgrabbr.com/widget/fgwidget.js"></script>
+          
+          </div>              
+        </div>
+
+  </div>
+</div>
+  
+
+<div class="fluid-container bottom-links text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="links-group m-x-auto">
+                  <h4><strong>
+                    <i class="fas fa-pen"></i><a href="http://medium.com/appsflyer" class="text-decoration-none" target="_blank"> Our Engineering Blog  |</a>
+                    <i class="fab fa-youtube"></i><a href="https://www.youtube.com/channel/UCp1l7PZjsMqnpLkTwY4wNmw/videos" class="text-decoration-none" target="_blank"> AppsFlyer Engineering YouTube  |</a></li>
+                    <i class="fab fa-twitter"></i><a href="http://twitter.com/appsflyerdev" class="text-decoration-none" target="_blank"> Follow us on Twitter  |</a>
+                    <i class="fa fa-plus"></i><a href="http://www.appsflyer.com/careers" class="text-decoration-none" target="_blank"> Join our Team</a>
+                  </strong></h4>
+                <div class="copyright">
+                  <br/>
+                  <br/>
+                    <h5><i class="fa fa-copyright"></i> Copyright AppsFlyer Engineering 2019</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  <script src="static/components/handlebars/handlebars.min.js"></script>
+  <script src="static/components/underscore/underscore-min.js"></script>
+
+  <script src="static/components/jquery/dist/jquery.min.js"></script>
+  <script src="static/components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="static/components/bootstrap-material-design/dist/js/ripples.min.js"></script>
+  <script src="static/components/bootstrap-material-design/dist/js/material.min.js"></script>
+  <script src="static/components/mixitup/build/jquery.mixitup.min.js"></script>
+  <script src="static/colors.js"></script>
+
+  <link rel="stylesheet" href="static/components/fontello-76a038de/css/fontello.css">
+
+  <script src="data/projects.json"></script>
+  <script src="static/app.js"></script>
+  <script>
+    var app = App();
+  </script>
+  <script src="static/af.js"></script>
+  
+</body>
+
+</html>
