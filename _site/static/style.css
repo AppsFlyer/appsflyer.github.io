@@ -1,5 +1,5 @@
 body, h2 {
-  font-family: Montserrat;
+  font-family: Roboto;
   font-weight: 100;
 }
 .navbar {
@@ -45,7 +45,7 @@ h2 {
   font-size: 25px;
   line-height: 60px;
   font-weight: bold;
-  font-family: 'Montserrat';
+  font-family: 'Roboto Condensed';
   text-transform: uppercase;
   padding-bottom: 2px;
 }
