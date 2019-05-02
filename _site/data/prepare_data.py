@@ -9,7 +9,7 @@ except ImportError:
     from urlparse import urlparse
 import logging
 
-__author__ = 'joeysim'
+__author__ = 'appsflyer'
 
 PAGE_SIZE = 100
 

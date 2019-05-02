@@ -5,7 +5,7 @@
 - Implemented full color palette from Material Design specifications (thanks @korgan00)
 - Reformat of `ripples.js` (thanks @grvcoelho)
 - Autofill option of `material.js` is now set to false by default
-- Deprecated `material-wfont.css`, now to include web fonts you should include roboto.css
+- Deprecated `material-wfont.css`, now to include web fonts you should include montserrat.css
 - Now `material.css` supports only the primary shades of the material color palette (lightweight! about 200KB)
 - `material-fullpalette.css` supports every shade of the material color palette (huge size! ~ 2MB)
 - Adjusted padding on dialog(modal) to be more inline with standards (thanks @GradyD)
