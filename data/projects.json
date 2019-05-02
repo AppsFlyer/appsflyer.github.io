@@ -28,14 +28,14 @@
     ], 
     "tags": [
       "Clojure", 
-      "Aerospike",
       "Database"
     ], 
     "icon_url": "", 
     "forks_count": 82, 
     "stars_count": 148, 
     "description": "Clojure client for the Aerospike database."
-  }, 
+}, 
+  
  {
     "icon_class": "mdi-action-extension", 
     "name": "Unity-Plugin", 
@@ -46,7 +46,7 @@
       }
     ], 
     "tags": [
-      "Unity", 
+      "SDK", 
       "Plugin"
     ], 
     "icon_url": "", 
@@ -65,11 +65,64 @@
     ], 
     "tags": [
       "Logging", 
-      "AWS"
+      "Cloud"
     ], 
     "icon_url": "", 
     "forks_count": 71, 
     "stars_count": 34, 
     "description": "elb-log-replay is a log replay tool for ELB (AWS Elastic Load Balancer) logs."
-  }
+  },
+  {
+    "icon_class": "mdi-action-tab", 
+    "name": "cordova-plugin-appsflyer-sdk", 
+    "links": [
+      {
+        "url": "https://github.com/AppsFlyerSDK/cordova-plugin-appsflyer-sdk", 
+        "title": "github"
+      }
+    ], 
+    "tags": [
+      "Plugin", 
+      "SDK"
+    ], 
+    "icon_url": "", 
+    "forks_count": 31, 
+    "stars_count": 16, 
+    "description": "AppsFlyer plugin for Cordova"
+  },
+  {
+  "icon_class": "mdi-content-sort", 
+  "name": "flutter_appsflyer_sdk", 
+  "links": [
+    {
+      "url": "https://github.com/AppsFlyerSDK/flutter_appsflyer_sdk", 
+      "title": "github"
+    }
+  ], 
+  "tags": [
+    "Plugin", 
+    "SDK"
+  ], 
+  "icon_url": "", 
+  "forks_count": 6, 
+  "stars_count": 8, 
+  "description": "Flutter Plugin for AppsFlyer SDK"
+},
+{
+  "icon_class": "mdi-image-image", 
+  "name": "Engineering-Org-Resources", 
+  "links": [
+    {
+      "url": "https://github.com/AppsFlyer/engineering-org-resources", 
+      "title": "github"
+    }
+  ], 
+  "tags": [
+    "Other"
+  ], 
+  "icon_url": "", 
+  "forks_count": 3, 
+  "stars_count": 2, 
+  "description": "AppsFlyer Engineering Resources - Talks, Speakers & More."
+}
 ]
