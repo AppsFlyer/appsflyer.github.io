@@ -84,8 +84,8 @@ module.exports = function(grunt) {
       },
       montserrat: {
         files: {
-          "dist/css/roboto.css": "dist/css/montserrat.css",
-          "dist/css/roboto.min.css": "dist/css/montserrat.min.css"
+          "dist/css/montserrat.css": "dist/css/montserrat.css",
+          "dist/css/montserrat.min.css": "dist/css/montserrat.min.css"
         }
       },
       ripples: {
