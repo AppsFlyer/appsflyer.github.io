@@ -106,7 +106,7 @@ module.exports = function(grunt) {
         src: "dist/css/material-fullpalette.css",
         dest: "dist/css/material-fullpalette.min.css"
       },
-      montserrat: {
+      monstserrat: {
         src: "dist/css/montserrat.css",
         dest: "dist/css/montserrat.min.css"
       },
