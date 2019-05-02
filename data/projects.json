@@ -13,8 +13,8 @@
       "Monitoring"
     ], 
     "icon_url": "", 
-    "forks_count": 20, 
-    "stars_count": 150, 
+    "forks_count": 3, 
+    "stars_count": 2, 
     "description": "A library built to provide support for defining service health for golang services."
   }, 
   {
@@ -68,8 +68,8 @@
       "Cloud"
     ], 
     "icon_url": "", 
-    "forks_count": 71, 
-    "stars_count": 34, 
+    "forks_count": 3, 
+    "stars_count": 2, 
     "description": "elb-log-replay is a log replay tool for ELB (AWS Elastic Load Balancer) logs."
   },
   {
