@@ -94,29 +94,7 @@ var materialColors = [
     }
   },
  
-  {
-    'name': 'light-green',
-    'niceName': 'Light Green',
-    'hues': {
-      '50':  '#00DFB0',
-      '100': '#00DFB0',
-      '200': '#00DFB0',
-      '300': '#00DFB0',
-      '400': '#00DFB0',
-      '500': '#00DFB0',
-      '600': '#00DFB0',
-      '700': '#00DFB0',
-      '800': '#00DFB0',
-      '900': '#00DFB0',
-    },
-    'accents': {
-      'A100': '#ccff90',
-      'A200': '#b2ff59',
-      'A400': '#76ff03',
-      'A700': '#64dd17'
-    }
-  },
- 
+   
     
   {
     'name': 'dark-purple',
