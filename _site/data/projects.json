@@ -1,0 +1,75 @@
+[
+   {
+    "icon_class": "mdi-image-healing", 
+    "name": "Go-Sundheit", 
+    "links": [
+      {
+        "url": "https://github.com/AppsFlyer/Go-Sundheit", 
+        "title": "github"
+      }
+    ], 
+    "tags": [
+      "Go", 
+      "Monitoring"
+    ], 
+    "icon_url": "", 
+    "forks_count": 20, 
+    "stars_count": 150, 
+    "description": "A library built to provide support for defining service health for golang services."
+  }, 
+  {
+    "icon_class": "mdi-action-view-day", 
+    "name": "Aerospike-CLJ", 
+    "links": [
+      {
+        "url": "https://github.com/AppsFlyer/aerospike-clj", 
+        "title": "github"
+      }
+    ], 
+    "tags": [
+      "Clojure", 
+      "Aerospike",
+      "Database"
+    ], 
+    "icon_url": "", 
+    "forks_count": 82, 
+    "stars_count": 148, 
+    "description": "Clojure client for the Aerospike database."
+  }, 
+ {
+    "icon_class": "mdi-action-extension", 
+    "name": "Unity-Plugin", 
+    "links": [
+      {
+        "url": "https://github.com/AppsFlyerSDK/Unity", 
+        "title": "github"
+      }
+    ], 
+    "tags": [
+      "Unity", 
+      "Plugin"
+    ], 
+    "icon_url": "", 
+    "forks_count": 71, 
+    "stars_count": 34, 
+    "description": "A unity plugin for AppsFlyer SDK"
+  },
+  {
+    "icon_class": "mdi-file-cloud", 
+    "name": "elb-log-replay", 
+    "links": [
+      {
+        "url": "https://github.com/AppsFlyer/elb-log-replay", 
+        "title": "github"
+      }
+    ], 
+    "tags": [
+      "Logging", 
+      "AWS"
+    ], 
+    "icon_url": "", 
+    "forks_count": 71, 
+    "stars_count": 34, 
+    "description": "elb-log-replay is a log replay tool for ELB (AWS Elastic Load Balancer) logs."
+  }
+]

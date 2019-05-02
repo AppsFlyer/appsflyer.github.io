@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Configuration Object | appsflyer.github.io</title>
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="Configuration Object" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="AppsFlyer Github Pages" />
+<meta property="og:description" content="AppsFlyer Github Pages" />
+<link rel="canonical" href="http://localhost:4000/static/components/mixitup/docs/configuration-object.html" />
+<meta property="og:url" content="http://localhost:4000/static/components/mixitup/docs/configuration-object.html" />
+<meta property="og:site_name" content="appsflyer.github.io" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/static/components/mixitup/docs/configuration-object.html","headline":"Configuration Object","description":"AppsFlyer Github Pages","@type":"WebPage","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=HEAD">
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="http://localhost:4000/">appsflyer.github.io</a></h1>
+      
+
+      <h1 id="configuration-object">Configuration Object</h1>
+
+<ol>
+  <li><a href="#overview">Overview</a></li>
+  <li><a href="#object-defaults">Object Defaults</a></li>
+  <li><a href="#options-by-group">Options by Group</a></li>
+  <li><a href="#option-details">Option Details</a></li>
+</ol>
+
+<h2 name="overview">Overview</h2>
+
+<p>MixItUp will run straight out of the box with default settings but can also be customised via an extensive configuration object passed during instantiation or at any time using the <code class="highlighter-rouge">setOptions</code> API method.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$('#Container').mixItUp({
+	animation: {
+		effects: 'fade translateZ(500px)',
+		duration: 300
+	},
+	selectors: {
+		target: 'li'
+	}
+});
+</code></pre></div></div>
+<blockquote>
+  <p>MixItUp can be instantiated with custom configuration options by passing the configuration object during instantiation</p>
+</blockquote>
+
+<p><br /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$('#Container').mixItUp('setOptions', {
+	animation: {
+		enable: false
+	}
+});
+</code></pre></div></div>
+<blockquote>
+  <p>MixItUp may also be re-configured after instantiation via the <code class="highlighter-rouge">setOptions</code> API method</p>
+</blockquote>
+
+<h2 name="object-defaults">Object Defaults</h2>
+
+<p>The configuration object is organized into several nested object literals of related properties. The entire object with all default values is listed below.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+	animation: {
+		enable: true,
+		effects: 'fade scale',
+		duration: 600,
+		easing: 'ease',
+		perspectiveDistance: '3000',
+		perspectiveOrigin: '50% 50%',
+		queue: false,
+		queueLimit: 1,
+		animateChangeLayout: false,
+		animateResizeContainer: true,
+		animateResizeTargets: false,
+		staggerSequence: false,
+		reverseOut: false
+	},
+	
+	callbacks: {
+		onMixLoad: false,
+		onMixStart: false,
+		onMixEnd: false,
+		onMixFail: false,
+		onMixBusy: false
+	},
+	
+	controls: {
+		enable: true,
+		live: false,
+		toggleFilterButtons: false,
+		toggleLogic: 'or',
+		activeClass: 'active'
+	},
+	
+	layout: {
+		display: 'inline-block',
+		containerClass: '',
+		containerClassFail: 'fail'
+	},
+
+	load: {
+		filter: 'all',
+		sort: false
+	},
+	
+	selectors: {
+		target: '.mix',
+		filter: '.filter',
+		sort: '.sort'
+	}
+}
+</code></pre></div></div>
+
+<h2 name="options-by-group">Options by Group</h2>
+
+<h3 id="animation">animation</h3>
+
+<p>This group contains properties related to MixItUp’s animation and effects options.</p>
+
+<ol>
+  <li><a href="#animationenable">enable</a></li>
+  <li><a href="#animationeffects">effects</a></li>
+  <li><a href="#animationduration">duration</a></li>
+  <li><a href="#animation-easing">easing</a></li>
+  <li><a href="#animationperspectivedistance">perspectiveDistance</a></li>
+  <li><a href="#animationperspectiveorigin">perspectiveOrigin</a></li>
+  <li><a href="#animationqueue">queue</a></li>
+  <li><a href="#animationqueuelimit">queueLimit</a></li>
+  <li><a href="#animationanimatechangelayout">animateChangeLayout</a></li>
+  <li><a href="#animationanimateresizecontainer">animateResizeContainer</a></li>
+  <li><a href="#animationanimateresizetargets">animateResizeTargets</a></li>
+  <li><a href="#animationstaggersequence">staggerSequence</a></li>
+  <li><a href="#animationreverseout">reverseOut</a></li>
+</ol>
+
+<h3 id="callbacks">callbacks</h3>
+
+<p>This group allows the creation of custom callback functions to be executed on specific events.</p>
+
+<ol>
+  <li><a href="#callbacksonmixload">onMixLoad</a></li>
+  <li><a href="#callbackonmixstart">onMixStart</a></li>
+  <li><a href="#callbacksonmixend">onMixEnd</a></li>
+  <li><a href="#callbacksonmixfail">onMixFail</a></li>
+  <li><a href="#callbacksonmixbusy">onMixBusy</a></li>
+</ol>
+
+<h3 id="controls">controls</h3>
+
+<p>This group contains properties related to MixItUp’s clickable (non-api) user-interface.</p>
+
+<ol>
+  <li><a href="#controlsenable">enable</a></li>
+  <li><a href="#controlslive">live</a></li>
+  <li><a href="#controlstogglefilterbuttons">toggleFilterButtons</a></li>
+  <li><a href="#controlstogglelogic">toggleLogic</a></li>
+  <li><a href="#controlsactiveclass">activeClass</a></li>
+</ol>
+
+<h3 id="layout">layout</h3>
+
+<p>This group contains properties related to the layout and styling of items within your MixItUp container.</p>
+
+<ol>
+  <li><a href="#layoutdisplay">display</a></li>
+  <li><a href="#layoutcontainerclass">containerClass</a></li>
+  <li><a href="#layoutcontainerclassfail">containerClassFail</a></li>
+</ol>
+
+<h3 id="load">load</h3>
+
+<p>This group defines MixItUp’s initial filter and sort behaviour on first load.</p>
+
+<ol>
+  <li><a href="#loadfilter">filter</a></li>
+  <li><a href="#loadsort">sort</a></li>
+</ol>
+
+<h3 id="selectors">selectors</h3>
+
+<p>This group allows the customisation of the default selector strings used for target elements, and clickable user-interface elements.</p>
+
+<ol>
+  <li><a href="#selectorstarget">target</a></li>
+  <li><a href="#selectorsfilter">filter</a></li>
+  <li><a href="#selectorssort">sort</a></li>
+</ol>
+
+<h2 name="option-details">Option Details</h2>
+
+<h3 name="animation-enable">animation.enable</h3>
+
+<p>type: <strong>Boolean</strong> / default: <code class="highlighter-rouge">true</code></p>
+
+<p>Enable or disable MixItUp animations. If false, all operations will happen instantly and synchronously.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$('#Container').mixItUp({
+	animation: {
+		enable: false		
+	}
+});
+</code></pre></div></div>
+<blockquote>
+  <p>Disable animations</p>
+</blockquote>
+
+<p><br /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$('#Container').mixItUp({
+	animation: {
+		enable: false		
+	},
+	callbacks: {
+		onMixLoad: function(){
+			$(this).mixItUp('setOptions', {
+				animation: {
+					enable: true	
+				},
+			});
+		}
+	}
+});
+</code></pre></div></div>
+<blockquote>
+  <p>Disable animations for loading, and then enable for subsequent operations</p>
+</blockquote>
+
+<h3 name="animation-effects">animation.effects</h3>
+
+<p>type: <strong>String</strong> / default: <code class="highlighter-rouge">'fade scale'</code></p>
+
+<p>The effects for all filter operations as a space-separated string. The available effects are:</p>
+
+<ul>
+  <li>fade</li>
+  <li>scale</li>
+  <li>translateX</li>
+  <li>translateY</li>
+  <li>translateZ</li>
+  <li>rotateX</li>
+  <li>rotateY</li>
+  <li>rotateZ</li>
+  <li>stagger</li>
+</ul>
+
+<p>Each effect may also take an optional parameter dictating its starting/ending value. Experiment with the home page sandbox to find the perfect combination of effects for your project.</p>
+
+<p>The stagger effect adds an incremental transition-delay to each target element in the order it is processed, and is also applied to sort operations. The order may be manipulated via the <code class="highlighter-rouge">animation.staggerFunction</code> option.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$('#Container').mixItUp({
+	animation: {
+		effects: 'fade rotateY(-10deg)'
+	}
+});
+</code></pre></div></div>
+<blockquote>
+  <p>Set fade and rotateY animations</p>
+</blockquote>
+
+<h3 name="animation-duration">animation.duration</h3>
+
+<p>type: <strong>Number</strong> / default: <code class="highlighter-rouge">600</code></p>
+
+<p>The duration of the animation in milliseconds, including easing, but not any delays added via the stagger effect.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$('#Container').mixItUp({
+	animation: {
+		duration: 1000
+	}
+});
+</code></pre></div></div>
+<blockquote>
+  <p>Set an animation duration of 1 second</p>
+</blockquote>
+
+<h3 name="animation-easing">animation.easing</h3>
+
+<p>type: <strong>String</strong> / default: <code class="highlighter-rouge">'ease'</code></p>
+
+<p>A valid CSS3 transition-timing function or shorthand. For a full list of accepted values, check out easings.net.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$('#Container').mixItUp({
+	animation: {
+		easing: 'cubic-bezier(0.175, 0.885, 0.32, 1.275)'
+	}
+});
+</code></pre></div></div>
+<blockquote>
+  <p>Set ‘ease-out-back’ easing.</p>
+</blockquote>
+
+<h3 name="animation-perspectiveDistance">animation.perspectiveDistance</h3>
+
+<p>type: <strong>String</strong> / default: <code class="highlighter-rouge">'3000px'</code></p>
+
+<p>The perspective value in CSS units applied to the container during animations, affecting any 3d transform-based effects.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$('#Container').mixItUp({
+	animation: {
+		perspectiveDistance: '1000px'
+	}
+});
+</code></pre></div></div>
+<blockquote>
+  <p>Set a perspective distance of 1000px</p>
+</blockquote>
+
+<h3 name="animation-perspectiveOrigin">animation.perspectiveOrigin</h3>
+
+<p>type: <strong>String</strong> / default: <code class="highlighter-rouge">'50% 50%'</code></p>
+
+<p>The perspective-origin value applied to the container during animations, affecting any 3d transform based effects.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$('#Container').mixItUp({
+	animation: {
+		perspectiveOrigin: '0 50%'
+	}
+});
+</code></pre></div></div>
+<blockquote>
+  <p>Set a perspective-origin equivalent to ‘left center’</p>
+</blockquote>
+
+<h3 name="animation-queue">animation.queue</h3>
+
+<p>type: <strong>Boolean</strong> / default: <code class="highlighter-rouge">true</code></p>
+
+<p>Enable queuing for all operations received while an another operation is in progress. If false, MixItUp’s API methods will return ‘busy’ instead of a chain-able DOM element.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$('#Container').mixItUp({
+	animation: {
+		queue: false		
+	}
+});
+</code></pre></div></div>
+<blockquote>
+  <p>Disable queueing</p>
+</blockquote>
+
+<h3 name="animation-queueLimit">animation.queueLimit</h3>
+
+<p>type: <strong>Number</strong> / default: <code class="highlighter-rouge">1</code></p>
+
+<p>The maximum number of operations allowed in the queue at any time.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$('#Container').mixItUp({
+	animation: {
+		queueLimit: 4
+	}
+});
+</code></pre></div></div>
+<blockquote>
+  <p>Allow a maximum of 4 operations in the queue</p>
+</blockquote>
+
+<h3 name="animation-animateChangeLayout">animation.animateChangeLayout</h3>
+
+<p>type: <strong>Boolean</strong> / default: <code class="highlighter-rouge">false</code></p>
+
+<p>A boolean indicating whether or not to attempt transitioning of target elements during layout change operations.</p>
+
+<p>Depending on the differences in styling between layouts this may produce undesirable results and is therefore disabled by default.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$('#Container').mixItUp({
+	animation: {
+		animateChangeLayout: true
+	}
+});
+</code></pre></div></div>
+<blockquote>
+  <p>Enable animation for layout change operations</p>
+</blockquote>
+
+<h3 name="animation-animateResizeContainer">animation.animateResizeContainer</h3>
+
+<p>type: <strong>Boolean</strong> / default: <code class="highlighter-rouge">true</code></p>
+
+<p>A boolean indicating whether or not to transition the height of the container as elements are filtered in and out. If disabled, the container height will change abruptly.</p>
+
+<p>This may be desirable for mobile devices where the CSS height property does not receive GPU-acceleration.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$('#Container').mixItUp({
+	animation: {
+		animateResizeContainer: false
+	}
+});
+</code></pre></div></div>
+<blockquote>
+  <p>Disable container height animation</p>
+</blockquote>
+
+<p>A fixed height, min-height, or max-height may also be applied to the container in your style sheet to prevent the container from changing height.</p>
+
+<h3 name="animation-animateResizeTargets">animation.animateResizeTargets</h3>
+
+<p>type: <strong>Boolean</strong> / default: <code class="highlighter-rouge">false</code></p>
+
+<p>This is an experimental feature aimed at flex box or layout change situations where the width and height of target elements may change from the start to end of the animation.</p>
+
+<p>If true, MixItUp will attempt to transition the height and width of target elements as they change.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$('#Container').mixItUp({
+	animation: {
+		animateResizeTargets: true
+	}
+});
+</code></pre></div></div>
+<blockquote>
+  <p>Animate changes to the width and height of target elements</p>
+</blockquote>
+
+<p>As the flex-box specification is not yet fully implemented across all browsers, this feature should be considered experimental.</p>
+
+<p>This feature requires additional calculations which may adversely affect performance on slower devices and is therefore disabled by default.</p>
+
+<h3 name="animation-staggerSequence">animation.staggerSequence</h3>
+
+<p>type: <strong>Function</strong> / default: <code class="highlighter-rouge">null</code></p>
+
+<p>When using the ‘stagger’ effect, the delay applied to each target element is incremented based on its index. You may create a custom function to manipulate the order in which the delay is incremented.</p>
+
+<p>This can be used to create engaging visuals when MixItUp first loads. You may wish to disable the function after load using the onMixLoad callback.</p>
+
+<p>The function receives the index of the target element as a parameter, and must return an integer which serves as the multiplier for the stagger delay.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$('#Container').mixItUp({
+	animation: {
+		effects: 'fade stagger(100ms)',
+		staggerSequence: function(i){
+			return i % 3;
+		}
+	}
+});
+</code></pre></div></div>
+<blockquote>
+  <p>Stagger target elements by column in a 3-column grid</p>
+</blockquote>
+
+<p><br /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$('#Container').mixItUp({
+	animation: {
+		effects: 'fade stagger(50ms)',
+		staggerSequence: function(i){
+			return (2*i) - (5*((i/3) - ((1/3) * (i%3))));
+		}
+	}
+});
+</code></pre></div></div>
+<blockquote>
+  <p>This function uses an algorithm to produce a more complex sequence</p>
+</blockquote>
+
+<h3 name="animation-reverseOut">animation.reverseOut</h3>
+
+<p>type: <strong>Boolean</strong> / default: <code class="highlighter-rouge">false</code></p>
+
+<p>Reverse the direction of “translate” and “rotate” transforms for elements being filtered out.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$('#Container').mixItUp({
+	animation: {
+		effects: 'fade translateX(100%)',
+		reverseOut: true
+	}
+});
+</code></pre></div></div>
+<blockquote>
+  <p>Elements being filtered in will be translated to ‘100%’ while elements being filtered out will be translated to ‘-100%’</p>
+</blockquote>
+
+<p><br /></p>
+<hr />
+
+<h3 name="callbacks-onMixLoad">callbacks.onMixLoad</h3>
+
+<p>type: <strong>Function</strong> / default: <code class="highlighter-rouge">null</code></p>
+
+<p>This callback function is called after MixItUp first loads and any loading animation has completed.</p>
+
+<p>The state object is passed as the first parameter, and the container element is assigned to the “this” keyword.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$('#Container').mixItUp({
+	callbacks: {
+		onMixLoad: function(state){
+			alert('MixItUp ready!');
+		}
+	}
+});
+</code></pre></div></div>
+
+<h3 name="callbacks-onMixStart">callbacks.onMixStart</h3>
+
+<p>type: <strong>Function</strong> / default: <code class="highlighter-rouge">null</code></p>
+
+<p>This callback function is called immediately after any MixItUp operation is requested and before animations have begun.</p>
+
+<p>The state object is passed as the first parameter, and the container element is assigned to the “this” keyword.</p>
+
+<p>A futureState object is passed as the second parameter, reflecting the state once the operation as completed.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$('#Container').mixItUp({
+	callbacks: {
+		onMixStart: function(state, futureState){
+			alert('Animation starting');
+		}
+	}
+});
+</code></pre></div></div>
+
+<h3 name="callbacks-onMixEnd">callbacks.onMixEnd</h3>
+
+<p>type: <strong>Function</strong> / default: <code class="highlighter-rouge">null</code></p>
+
+<p>This callback function is called after any MixItUp operation has completed and the state object has been updated.</p>
+
+<p>The state object is passed as the first parameter, and the container element is assigned to the “this” keyword.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$('#Container').mixItUp({
+	callbacks: {
+		onMixEnd: function(state){
+			alert('Operation ended');
+		}
+	}
+});
+</code></pre></div></div>
+
+<h3 name="callbacks-onMixFail">callbacks.onMixFail</h3>
+
+<p>type: <strong>Function</strong> / default: <code class="highlighter-rouge">null</code></p>
+
+<p>This callback function is called when no target elements match the requested filter command.</p>
+
+<p>The state object is passed as the first parameter, and the container element is assigned to the “this” keyword.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$('#Container').mixItUp({
+	callbacks: {
+		onMixFail: function(state){
+			alert('No elements found matching '+state.activeFilter);
+		}
+	}
+});
+</code></pre></div></div>
+
+<h3 name="callbacks-onMixBusy">callbacks.onMixBusy</h3>
+
+<p>type: <strong>Function</strong> / default: <code class="highlighter-rouge">null</code></p>
+
+<p>type: Function / default: null
+This callback function is called if animation queuing is disabled and a MixItUp operation is requested while another operation is in progress.</p>
+
+<p>The state object is passed as the first parameter, and the container element is assigned to the “this” keyword.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$('#Container').mixItUp({
+	callbacks: {
+		onMixBusy: function(state){
+			alert('MixItUp busy');
+		}
+	}
+});
+</code></pre></div></div>
+
+<p><br /></p>
+<hr />
+
+<h3 name="controls-enable">controls.enable</h3>
+
+<p>type: <strong>Boolean</strong> / default: <code class="highlighter-rouge">true</code></p>
+
+<p>Enable or disable physical controls for filter and sort operations.</p>
+
+<p>If disabled, MixItUp will not look for filter and sort buttons to bind on instantiation which may marginally increase loading speed.</p>
+
+<p>Controls can be disabled if you are interacting with MixItUp via its API exclusively. This may also be useful in preventing requests from other MixItUp instances in the document that are using controls.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$('#Container').mixItUp({
+	controls: {
+		enable: false
+	}
+});
+</code></pre></div></div>
+<blockquote>
+  <p>Disable the binding of physical filter and sort controls</p>
+</blockquote>
+
+<h3 name="controls-live">controls.live</h3>
+
+<p>type: <strong>Boolean</strong> / default: <code class="highlighter-rouge">false</code></p>
+
+<p>By default MixItUp will apply click handlers to individual filter and sort buttons. This is the fastest way to bind on load, but may not be suitable for situations where controls are added and removed dynamically after MixItUp has loaded.</p>
+
+<p>If set to true, MixItUp will delegate filter and sort click events from the body down, enabling the binding of controls that may not exist when  MixItUp first loads.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$('#Container').mixItUp({
+	controls: {
+		live: true
+	}
+});
+</code></pre></div></div>
+<blockquote>
+  <p>Delegate control button click events from the body down</p>
+</blockquote>
+
+<h3 name="controls-toggleFilterButtons">controls.toggleFilterButtons</h3>
+
+<p>type: <strong>Boolean</strong> / default: <code class="highlighter-rouge">false</code></p>
+
+<p>Enable or disable the toggling of multiple filter buttons.</p>
+
+<p>By default, MixItUp allows only one filter button to be active at any one time. If set to true, multiple filter buttons may be toggled on or off simultaneously and their data-filter values concatenated into a single filter command, as per the logic defined via the toggleLogic property.</p>
+
+<p>This is a fairly simple way to achieve more “advanced” filtering without having to construct custom API-based concatenation functions.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$('#Container').mixItUp({
+	controls: {
+		toggleFilterButtons: true
+	}
+});
+</code></pre></div></div>
+<blockquote>
+  <p>Allow the toggling of multiple filter buttons</p>
+</blockquote>
+
+<h3 name="controls-toggleLogic">controls.toggleLogic</h3>
+
+<p>type: <strong>String</strong> / default: <code class="highlighter-rouge">'or'</code></p>
+
+<p>Define the logic by which the data-filter value of filter buttons are concatenated, when the toggleFilterButtons property is enabled.</p>
+
+<p>The available options are ‘or’ and ‘and’.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'.category-1, .category-2'
+</code></pre></div></div>
+<blockquote>
+  <p>With “or” logic, selectors are concatenated into a single comma-separated selector</p>
+</blockquote>
+
+<p><br /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'.category-1.category-2'
+</code></pre></div></div>
+<blockquote>
+  <p>With “and” logic, selectors are joined into a single compound selector</p>
+</blockquote>
+
+<p><br /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$('#Container').mixItUp({
+	controls: {
+		toggleFilterButtons: true,
+		toggleLogic: 'and'
+	}
+});
+</code></pre></div></div>
+<blockquote>
+  <p>Enable “and” logic for filter button toggling.</p>
+</blockquote>
+
+<h3 name="controls-activeClass">controls.activeClass</h3>
+
+<p>type: <strong>String</strong> / default: <code class="highlighter-rouge">'active'</code></p>
+
+<p>The class applied to individual MixItUp control elements when their filter or sort state is active.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$('#Container').mixItUp({
+	controls: {
+		activeClass: 'on'
+	}
+});
+</code></pre></div></div>
+<blockquote>
+  <p>Change the active class to ‘on’</p>
+</blockquote>
+
+<p><br /></p>
+<hr />
+
+<h3 name="layout-display">layout.display</h3>
+
+<p>type: <strong>String</strong> / default: <code class="highlighter-rouge">'inline-block'</code></p>
+
+<p>Set the inline “display” property of target elements.</p>
+
+<p>As all target elements should be hidden by default via the project stylesheet, the display property is set as an inline style for elements that match the current filter and are therefore shown.</p>
+
+<p>This is set to “inline-block” by default which is most suited to multi-column grid situations, but may be set to “block” for a single column list styling.</p>
+
+<p>If using flex box, the display property is ignored, unless set to “none”.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$('#Container').mixItUp({
+	layout: {
+		display: 'block'
+	}
+});
+</code></pre></div></div>
+<blockquote>
+  <p>Set shown target elements to “display: block;”</p>
+</blockquote>
+
+<h3 name="layout-containerClass">layout.containerClass</h3>
+
+<p>type: <strong>String</strong> / default: <code class="highlighter-rouge">''</code></p>
+
+<p>An optional class added to the container on load, which may be used to affect the styling of target elements.</p>
+
+<p>This class can be changed via the changeLayout API method.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$('#Container').mixItUp({
+	layout: {
+		containerClass: 'list'
+	}
+});
+</code></pre></div></div>
+<blockquote>
+  <p>Add the class “list” to the container on load</p>
+</blockquote>
+
+<h3 name="layout-containerClassFail">layout.containerClassFail</h3>
+
+<p>type: <strong>String</strong> / default: <code class="highlighter-rouge">'fail'</code></p>
+
+<p>A class added to the container when no target elements are found that match the filter selector, which may be used to show or style a feedback message for the user.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$('#Container').mixItUp({
+	layout: {
+		containerClassFail: 'none-found'
+	}
+});
+</code></pre></div></div>
+<blockquote>
+  <p>Change the fail class to “none-found”</p>
+</blockquote>
+
+<p><br /></p>
+<hr />
+
+<h3 name="load-filter">load.filter</h3>
+
+<p>type: <strong>String</strong> or <strong>Object</strong> / default: <code class="highlighter-rouge">'all'</code></p>
+
+<p>Define which target elements to show on load. All target elements are shown by default.</p>
+
+<p>Consistent with the filter API method, and jQuery’s .filter() method, this property accepts a selector string or jQuery object.</p>
+
+<p>The values ‘all’ and ‘none’ are also valid.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$('#Container').mixItUp({
+	load: {
+		filter: '.category-1'
+	}
+});
+</code></pre></div></div>
+<blockquote>
+  <p>Show elements with the class “.category-1” on load.</p>
+</blockquote>
+
+<h3 name="load-sort">load.sort</h3>
+
+<p>type: <strong>String</strong> / default: <code class="highlighter-rouge">'default:asc'</code></p>
+
+<p>Define the order that target elements are sorted on load.</p>
+
+<p>By default, elements are not sorted and appear in the order of their position in the DOM (“default” order).</p>
+
+<p>The sort string is made up of two colon-separated parts as follows: attribute-name:order</p>
+
+<p>The first part of the string is the name of the data attribute to sort by (excluding the word data), and the second part is the order (asc/desc). The second part is optional as ascending order is assumed.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$('#Container').mixItUp({
+	load: {
+		sort: 'age:desc'
+	}
+});
+</code></pre></div></div>
+<blockquote>
+  <p>Sort target elements by the value of their “data-age” attributes, in descending order</p>
+</blockquote>
+
+<p><br /></p>
+
+<p>Multiple space-separated sort strings may be joined together in order of priority:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$('#Container').mixItUp({
+	load: {
+		sort: 'age:desc name:asc'
+	}
+});
+</code></pre></div></div>
+<blockquote>
+  <p>Sort target elements first by their “data-age” attribute, and then by “data-name”</p>
+</blockquote>
+
+<p><br /></p>
+<hr />
+
+<h3 name="selectors-target">selectors.target</h3>
+
+<p>type: <strong>String</strong> / default: <code class="highlighter-rouge">'.mix'</code></p>
+
+<p>A selector defining which elements within the container should be treated as “target” elements, and are therefore included in filter and sort elements.</p>
+
+<p>By default only elements with the class “mix” are treated as target elements.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$('#Container').mixItUp({
+	selectors: {
+		target: 'li'
+	}
+});
+</code></pre></div></div>
+<blockquote>
+  <p>Set the target selector to “li”</p>
+</blockquote>
+
+<h3 name="selectors-filter">selectors.filter</h3>
+
+<p>type: <strong>String</strong> / default: <code class="highlighter-rouge">'.filter'</code></p>
+
+<p>A selector used to bind filter buttons.</p>
+
+<p>By default, any element with the class “filter” will have a click event-handler bound to it, for the triggering of filter operations.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$('#Container').mixItUp({
+	selectors: {
+		filter: '.filter-btn'
+	}
+});
+</code></pre></div></div>
+<blockquote>
+  <p>Change the filter button selector to “.filter-btn”</p>
+</blockquote>
+
+<h3 name="selectors-sort">selectors.sort</h3>
+
+<p>type: <strong>String</strong> / default: <code class="highlighter-rouge">'.sort'</code></p>
+
+<p>A selector used to bind sort buttons.</p>
+
+<p>By default, any element with the class “sort” will have a click event-handler bound to it, for the triggering of  sort operations.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$('#Container').mixItUp({
+	selectors: {
+		filter: '.sort-btn'
+	}
+});
+</code></pre></div></div>
+<blockquote>
+  <p>Change the sort button selector to “.sort-btn”</p>
+</blockquote>
+
+<p><br /></p>
+
+<hr />
+<p><em>© 2014 KunkaLabs Limited</em></p>
+
+
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+    
+  </body>
+</html>
