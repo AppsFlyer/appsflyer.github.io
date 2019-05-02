@@ -152,7 +152,7 @@ var hashStorage = {};
 
 // hashes the key, and consistently picks a color from colors array
 function getMaterialColor(key, hue) {
-    !hue && (hue = '600');
+    !hue && (hue = '200', '400', '600','800');
 
     if (key in hashStorage) {
       color_node = hashStorage[key];
