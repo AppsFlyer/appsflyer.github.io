@@ -35,17 +35,17 @@ module.exports = function(grunt) {
           "dist/css/material-fullpalette.css": "less/material-fullpalette.less",
         }
       },
-      roboto: {
+      montserrat: {
         options: {
           paths: ["less"],
           sourceMap: true,
           sourceMapRootpath: "/",
-          sourceMapFilename: "dist/css/roboto.css.map",
-          sourceMapURL: "roboto.css.map",
+          sourceMapFilename: "dist/css/montserrat.css.map",
+          sourceMapURL: "montserrat.css.map",
           outputSourceFiles: true
         },
         files: {
-          "dist/css/roboto.css": "less/roboto.less",
+          "dist/css/montserrat.css": "less/montserrat.less",
         }
       },
       ripples: {
