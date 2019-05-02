@@ -82,10 +82,10 @@ module.exports = function(grunt) {
           "dist/css/material-fullpalette.min.css": "dist/css/material-fullpalette.min.css"
         }
       },
-      roboto: {
+      montserrat: {
         files: {
-          "dist/css/roboto.css": "dist/css/roboto.css",
-          "dist/css/roboto.min.css": "dist/css/roboto.min.css"
+          "dist/css/roboto.css": "dist/css/montserrat.css",
+          "dist/css/roboto.min.css": "dist/css/montserrat.min.css"
         }
       },
       ripples: {
@@ -106,9 +106,9 @@ module.exports = function(grunt) {
         src: "dist/css/material-fullpalette.css",
         dest: "dist/css/material-fullpalette.min.css"
       },
-      roboto: {
-        src: "dist/css/roboto.css",
-        dest: "dist/css/roboto.min.css"
+      monstserrat: {
+        src: "dist/css/montserrat.css",
+        dest: "dist/css/montserrat.min.css"
       },
       ripples: {
         src: "dist/css/ripples.css",
@@ -267,13 +267,13 @@ module.exports = function(grunt) {
   grunt.registerTask("material:less", [
     "less:material",
     "less:materialfullpalette",
-    "less:roboto",
+    "less:montserrat",
     "csswring:material",
     "csswring:materialfullpalette",
-    "csswring:roboto",
+    "csswring:montserrat",
     "autoprefixer:material",
     "autoprefixer:materialfullpalette",
-    "autoprefixer:roboto"
+    "autoprefixer:montserrat"
   ]);
   grunt.registerTask("material:js", [
     "copy:material",
