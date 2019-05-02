@@ -1,6 +1,6 @@
-# AppsFlyer Engineering Github.io
+# [AppsFlyer Engineering Github.io](https://appsflyer.github.io)
 
-<img src="/img/AF-Eng-banner.png" width="100%">
+[<img src="/img/AF-Eng-banner.png" width="100%">]((https://appsflyer.github.io))
 
 **The AppsFlyer engineering contains open source libraries for you to levarage and contributte to, and other resources from our engineering organization**
 
