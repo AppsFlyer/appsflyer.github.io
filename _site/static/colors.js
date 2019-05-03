@@ -94,8 +94,7 @@ var materialColors = [
     }
   },
  
-   
-    
+  
   {
     'name': 'dark-purple',
     'niceName': 'Dark Purple',
@@ -130,7 +129,7 @@ var hashStorage = {};
 
 // hashes the key, and consistently picks a color from colors array
 function getMaterialColor(key, hue) {
-    !hue && (hue = '200', '400', '600','800');
+    !hue && (hue = '600');
 
     if (key in hashStorage) {
       color_node = hashStorage[key];
