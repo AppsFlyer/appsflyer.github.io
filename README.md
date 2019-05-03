@@ -2,7 +2,7 @@
 
 [<img src="/img/AF-Eng-banner.png" width="100%">]((https://appsflyer.github.io))
 
-**The AppsFlyer engineering github.io pagee contains open source libraries for you to leverage and contribute to, and other resources from our engineering organization**
+**The AppsFlyer engineering github.io page contains open source libraries for you to leverage and contribute to, and other resources from our engineering organization**
 
 <hr/>
 
