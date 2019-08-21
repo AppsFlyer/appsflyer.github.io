@@ -52,7 +52,7 @@
     "icon_url": "", 
     "forks_count": 2, 
     "stars_count": 8, 
-    "description": "Mate-clj is a Clojure library that will help you to control the flow of core macros and functions and will help you debug your code out of the box."
+    "description": "elb-log-replay is a log replay tool for ELB (AWS Elastic Load Balancer) logs."
   },
     {
     "icon_class": "mdi-action-pageview", 
@@ -69,7 +69,7 @@
     "icon_url": "", 
     "forks_count": 38, 
     "stars_count": 18, 
-    "description": "AppsFlyer plugin for Cordova"
+    "description": "Mate-clj is a Clojure library that will help you to control the flow of core macros and functions and will help you debug your code out of the box."
   }, 
   {
     "icon_class": "mdi-action-tab", 
