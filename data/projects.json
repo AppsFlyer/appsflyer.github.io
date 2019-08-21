@@ -13,8 +13,8 @@
       "Monitoring"
     ], 
     "icon_url": "", 
-    "forks_count": 3, 
-    "stars_count": 2, 
+    "forks_count": 4, 
+    "stars_count": 227, 
     "description": "A library built to provide support for defining service health for golang services."
   }, 
   {
