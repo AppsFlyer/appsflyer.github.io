@@ -36,24 +36,6 @@
     "description": "Clojure client for the Aerospike database."
 }, 
   
- {
-    "icon_class": "mdi-action-extension", 
-    "name": "Unity-Plugin", 
-    "links": [
-      {
-        "url": "https://github.com/AppsFlyerSDK/Unity", 
-        "title": "github"
-      }
-    ], 
-    "tags": [
-      "SDK", 
-      "Plugin"
-    ], 
-    "icon_url": "", 
-    "forks_count": 71, 
-    "stars_count": 34, 
-    "description": "A unity plugin for AppsFlyer SDK"
-  },
   {
     "icon_class": "mdi-file-cloud", 
     "name": "elb-log-replay", 
@@ -68,10 +50,27 @@
       "Cloud"
     ], 
     "icon_url": "", 
-    "forks_count": 3, 
-    "stars_count": 2, 
-    "description": "elb-log-replay is a log replay tool for ELB (AWS Elastic Load Balancer) logs."
+    "forks_count": 2, 
+    "stars_count": 8, 
+    "description": "Mate-clj is a Clojure library that will help you to control the flow of core macros and functions and will help you debug your code out of the box."
   },
+    {
+    "icon_class": "mdi-action-pageview", 
+    "name": "mate-clj", 
+    "links": [
+      {
+        "url": "https://github.com/AppsFlyer/mate-clj", 
+        "title": "github"
+      }
+    ], 
+    "tags": [
+      "Clojure" 
+    ], 
+    "icon_url": "", 
+    "forks_count": 38, 
+    "stars_count": 18, 
+    "description": "AppsFlyer plugin for Cordova"
+  }, 
   {
     "icon_class": "mdi-action-tab", 
     "name": "cordova-plugin-appsflyer-sdk", 
@@ -82,7 +81,7 @@
       }
     ], 
     "tags": [
-      "Plugin", 
+      "Mobile", 
       "SDK"
     ], 
     "icon_url": "", 
@@ -100,7 +99,7 @@
     }
   ], 
   "tags": [
-    "Plugin", 
+    "Mobile", 
     "SDK"
   ], 
   "icon_url": "", 
@@ -124,5 +123,24 @@
   "forks_count": 3, 
   "stars_count": 2, 
   "description": "AppsFlyer Engineering Resources - Talks, Speakers & More."
-}
+},
+   
+ {
+    "icon_class": "mdi-action-extension", 
+    "name": "Unity-Plugin", 
+    "links": [
+      {
+        "url": "https://github.com/AppsFlyerSDK/Unity", 
+        "title": "github"
+      }
+    ], 
+    "tags": [
+      "SDK", 
+      "Mobile"
+    ], 
+    "icon_url": "", 
+    "forks_count": 71, 
+    "stars_count": 34, 
+    "description": "A unity plugin for AppsFlyer SDK"
+  }   
 ]
