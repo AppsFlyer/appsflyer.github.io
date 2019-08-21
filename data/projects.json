@@ -33,7 +33,7 @@
     "icon_url": "", 
     "forks_count": 82, 
     "stars_count": 148, 
-    "description": "Clojure client for the Aerospike database."
+    "description": "Aerospike-clj is an opinionated Clojure library wrapping Aerospike Java Client."
 }, 
   
   {
