@@ -207,10 +207,35 @@
     </div>
 </div>
 
-{% include footer_scripts.html %}
+<script src="static/components/handlebars/handlebars.min.js"></script>
+<script src="static/components/underscore/underscore-min.js"></script>
+
+<script src="static/components/jquery/dist/jquery.min.js"></script>
+<script src="static/components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="static/components/bootstrap-material-design/dist/js/ripples.min.js"></script>
+<script src="static/components/bootstrap-material-design/dist/js/material.min.js"></script>
+<script src="static/components/mixitup/build/jquery.mixitup.min.js"></script>
+<script src="static/colors.js"></script>
+
+<link rel="stylesheet" href="static/components/fontello-76a038de/css/fontello.css">
+
+<script src="data/projects.json"></script>
+<script src="static/app.js"></script>
+<script>
+  var app = App();
+</script>
+<script src="static/af.js"></script>
 
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-33607448-17"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
 
+gtag('config', 'UA-33607448-17');
+</script>
 </body>
 
 </html>
